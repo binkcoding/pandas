@@ -12,7 +12,7 @@ df_cleaned = df.dropna()
 df_filled = df.fillna(df.mean(numeric_only=True))
 
 #Replace missing values with mean of each column
-#df.fillna(df.mean(), inplace=True)
+df.fillna(df.mean(), inplace=True)
 
 #Identifying duplicates
 print(df.duplicated().sum())
@@ -21,20 +21,20 @@ print(df.duplicated().sum())
 df_no_duplicats = df.drop_duplicates()
 
 #Convert data types to other data types
-# df['Column 1'] = df['Column1'].astype(float)
+df['Column 1'] = df['Column1'].astype(float)
 
 #Convert categorical data to numerical data
 # df_encode = pd.get_dummies(df, columns=[car_brand])
 
 #Identifying outliers
-# Q1 = df["precipitation"].quantile(0.25)
-# Q3 = df["temp_max"].quantile(0.75)
-# IQR = Q3 - Q1
+Q1 = df["precipitation"].quantile(0.25)
+Q3 = df["temp_max"].quantile(0.75)
+IQR = Q3 - Q1
 
 
 #Find out what each column data type is
-# print(df.dtypes)
+print(df.dtypes)
 
-# print(df.head())
-# print(df.describe())
-# print(df.info())
+print(df.head())
+print(df.describe())
+print(df.info())
