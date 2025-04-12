@@ -11,6 +11,7 @@ df_cleaned = df.dropna()
 #Fill missing values with mean for numerical data and assign to variable df filled
 df_filled = df.fillna(df.mean(numeric_only=True))
 
+
 print(df.head())
 print(df.describe())
 print(df.info())
