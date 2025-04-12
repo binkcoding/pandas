@@ -11,6 +11,16 @@ df_cleaned = df.dropna()
 #Fill missing values with mean for numerical data and assign to variable df filled
 df_filled = df.fillna(df.mean(numeric_only=True))
 
+#Replace missing values with mean of each column
+#df.fillna(df.mean(), inplace=True)
+
+#Identifying duplicates
+print(df.duplicated().sum())
+
+#Removing duplicats
+df_no_duplicats = df.drop_duplicates()
+
+
 
 print(df.head())
 print(df.describe())
